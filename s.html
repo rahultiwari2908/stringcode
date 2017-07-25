@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> String Reverse </title>
+<link href="s.css"
+type= "text/css"
+rel="stylesheet">
+<script>
+function input(){
+ var a=document.getElementById("box").value;
+a=a.toUpperCase();
+var c=a.split("").reverse().join("");
+console.log(c);
+	document.getElementById("para").innerHTML=c;
+
+}/*
+function convert(c){
+for(var i=0;i<a.length;i++){
+if(c[i]=='A'){
+c[i]=c[i].replace("A","Z");}
+}
+console.log(c);
+}
+*/
+/*
+function convert(){
+var b=new Array;
+b=document.a;
+/*
+b=b.replace(/A/g,"Z");
+b=b.replace(/B/g,"Y");
+b=b.replace(/C/g,"X");
+b=b.replace(/D/g,"W");
+b=b.replace(/E/g,"V");
+b=b.replace(/F/g,"U");
+b=b.replace(/G/g,"T");
+b=b.replace(/H/g,"S");
+b=b.replace(/I/g,"R");
+b=b.replace(/J/g,"Q");
+b=b.replace(/K/g,"P");
+b=b.replace(/L/g,"O");
+b=b.replace(/M/g,"N");
+b=b.replace(/N/g,"M");
+b=b.replace(/O/g,"L");
+b=b.replace(/P/g,"K");
+b=b.replace(/Q/g,"J");
+b=b.replace(/R/g,"I");
+b=b.replace(/S/g,"H");
+b=b.replace(/T/g,"G");
+b=b.replace(/U/g,"F");
+b=b.replace(/V/g,"E");
+b=b.replace(/W/g,"D");
+b=b.replace(/X/g,"C");
+b=b.replace(/Y/g,"B");
+b=b.replace(/Z/g,"A");
+*//*
+for(var i=0;i<b.length;i++){
+
+if(b.charAt(i)=='A'){
+b[i]=b[i].replace("A","Z");
+console.log(b);
+}
+}
+document.getElementById("para").innerHTML=b;
+}
+*/
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"> </script>
+</head>
+
+
+
+<body>
+<h1> String Reverse </h1>
+Enter A String <br>
+<table border="1" width="300"  id="myTable"> 
+<tr>
+<td width="150"><input type="text" id="box" onkeyup= "input();">
+
+</td>
+<td width="150"  > 
+<p id="para"></p>
+</td>
+</tr>
+</table>
+<!--
+<button type="button" onclick= "reset();"> Reset</button>
+-->
+</body>
+</html>
