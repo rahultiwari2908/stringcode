@@ -7,35 +7,37 @@ type= "text/css"
 rel="stylesheet">
 <script>
 
-function input(n){
+function input(n)
+{
 	
 	var n = n.charCodeAt(0);
+	if(n>90)
+	{
+	var upperlimit = n-122;
+	var lowerlimit = 97 - upperlimit;
+	var result = String.fromCharCode(lowerlimit);
+	return result;
+    }else
+    {
 	var upperlimit = n-65;
 	var lowerlimit = 90 - upperlimit;
 	var result = String.fromCharCode(lowerlimit);
 	return result;
-
+    }
 }
 
-function reverse_string() {
+function reverse_string() 
+{
 	var reversed = "";
 	var a=document.getElementById("box").value;	
-	a=a.toUpperCase();
-	var length = a.length;
+		var length = a.length;
 	for (var i = 0; i<length; i++) {
 		reversed =reversed+ input(a.charAt(i));
 	} 
  document.getElementById("para").innerHTML=reversed;
 }
 
-
-
-
-
-
-
 </script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"> </script>
 </head>
 
 
@@ -43,7 +45,7 @@ function reverse_string() {
 <body>
 <h1> String Reverse </h1>
 Enter A String <br>
-<table border="1" width="300"  id="myTable"> 
+<table border="1"  id="myTable"> 
 <tr>
 <td width="150"><input type="text" id="box" onkeyup= "reverse_string();">
 
